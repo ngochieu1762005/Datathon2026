@@ -175,41 +175,6 @@ File này cũng được lưu trong:
 outputs/sub_final.csv
 ```
 
-## 6. Các kết quả phân tích
-
-Các kết quả của phần phân tích dữ liệu được lưu tại:
-
-```text
-outputs/outputs_part2/
-```
-
-Một số biểu đồ chính gồm:
-
-```text
-fig01_yearly_index.png
-fig02_revenue_waterfall.png
-fig03_seasonality_heatmaps.png
-fig04_day_of_month_heatmap.png
-fig05_promo_vs_nonpromo.png
-fig06_weekday_vs_weekend.png
-fig07_month_end_vs_mid_month.png
-fig08_conversion_scenario.png
-```
-
-Các biểu đồ này được dùng để trình bày xu hướng doanh thu, mức độ thay đổi qua các năm, tính mùa vụ, tác động của khuyến mãi, khác biệt giữa ngày thường và cuối tuần, cũng như một số kịch bản kinh doanh liên quan đến chuyển đổi.
-
-Ngoài biểu đồ, thư mục `tables/` lưu các bảng dữ liệu đã tổng hợp như:
-
-```text
-yearly_summary.csv
-monthly_seasonality.csv
-quarterly_summary.csv
-promo_vs_nonpromo.csv
-weekday_vs_weekend.csv
-scenario_forecast.csv
-```
-
-Những bảng này giúp kiểm chứng số liệu trong báo cáo và hỗ trợ việc diễn giải insight một cách rõ ràng hơn.
 
 ## 7. File dự báo cuối cùng
 
@@ -228,7 +193,7 @@ Date,Revenue,COGS
 2023-01-03,...
 ```
 
-Khi nộp lên Kaggle, file cần giữ đúng cấu trúc và thứ tự dòng theo file mẫu `sample_submission.csv`.
+Score: 634048.35161
 
 ## 8. Báo cáo
 
@@ -280,17 +245,4 @@ Bài làm được xây dựng theo một quy trình đầy đủ:
 
 Bài làm không sử dụng dữ liệu ngoài. Các đặc trưng và kết quả đều được tạo từ dữ liệu do cuộc thi cung cấp.
 
-## 11. Ghi chú trước khi nộp
 
-Trước khi nộp bài, cần kiểm tra lại các mục sau:
-
-```text
-README.md
-requirements.txt
-sub_final.csv
-notebooks/
-outputs/daily_table.csv
-report/report.pdf
-```
-
-Repository cần được đặt ở chế độ public hoặc cấp quyền truy cập cho ban tổ chức trước thời hạn nộp bài.
