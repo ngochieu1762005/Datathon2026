@@ -2,12 +2,16 @@
 
 ## 1. Giới thiệu
 
-Repository này là bài làm của nhóm **Nguyễn Ngọc Hiếu** cho cuộc thi **DATATHON 2026 Vòng 1 - The Gridbreaker**.
+Repository này là bài làm của đội thi **Nguyễn Ngọc Hiếu** cho cuộc thi **DATATHON 2026 Vòng 1 - The Gridbreaker**.
 
-Bài toán chính của cuộc thi là phân tích dữ liệu kinh doanh của một doanh nghiệp thương mại điện tử thời trang và xây dựng mô hình dự báo doanh thu. Trong bài làm này, nhóm tập trung vào hai phần chính:
+### Thành viên đội thi
 
-- Phân tích dữ liệu và rút ra các insight có ý nghĩa kinh doanh
-- Xây dựng pipeline dự báo doanh thu và tạo file nộp Kaggle cuối cùng
+- Nguyễn Ngọc Yến
+- Nguyễn Ngọc Hiếu
+- Huỳnh Kim Gia Bảo
+- Phạm Minh Trí
+
+Bài toán chính của cuộc thi là phân tích dữ liệu kinh doanh của một doanh nghiệp thương mại điện tử thời trang và xây dựng mô hình dự báo doanh thu.
 
 File dự báo cuối cùng của nhóm là:
 
