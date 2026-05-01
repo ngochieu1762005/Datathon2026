@@ -58,58 +58,10 @@
 
 
 
-\tableofcontents
-\newpage
-\phantomsection
-\addcontentsline{toc}{section}{Danh sách hình vẽ}
-\setcounter{page}{0}
-\listoffigures
-\thispagestyle{empty}
 
-\newpage
 
 % =========================================================
-\section*{Danh mục ký hiệu}
-\setcounter{page}{0}
-\thispagestyle{empty}
-\addcontentsline{toc}{section}{Danh mục ký hiệu}
 
-\begin{table}[H]
-\centering
-\small
-\caption{Ký hiệu và thước đo sử dụng trong báo cáo}
-\label{tab:notations}
-\begin{tabularx}{\textwidth}{
->{\raggedright\arraybackslash}p{0.18\textwidth}
->{\raggedright\arraybackslash}p{0.30\textwidth}
-X}
-\toprule
-\textbf{Ký hiệu} & \textbf{Ý nghĩa} & \textbf{Cách tính / diễn giải} \\
-\midrule
-$S_t$ & Số phiên truy cập trong ngày $t$ & Tương ứng với biến \texttt{sessions}. \\
-$O_t$ & Số đơn hàng trong ngày $t$ & Tương ứng với biến \texttt{order\_count}. \\
-$R_t$ & Doanh thu trong ngày $t$ & Tương ứng với biến \texttt{Revenue}. \\
-$COGS_t$ & Giá vốn trong ngày $t$ & Tương ứng với biến \texttt{COGS}. \\
-$GP_t$ & Lợi nhuận gộp trong ngày $t$ & $GP_t = R_t - COGS_t$. \\
-$GM_t$ & Biên lợi nhuận gộp trong ngày $t$ & $GM_t = \dfrac{GP_t}{R_t}$. \\
-$CVR_t$ & Tỷ lệ chuyển đổi trong ngày $t$ & $CVR_t = \dfrac{O_t}{S_t}$. \\
-$AOV_t$ & Giá trị trung bình mỗi đơn hàng & $AOV_t = \dfrac{R_t}{O_t}$. \\
-$RPS_t$ & Doanh thu trên mỗi phiên truy cập & $RPS_t = \dfrac{R_t}{S_t}$. \\
-\texttt{promo\_share} & Tỷ lệ ngày có khuyến mại & Trung bình của biến nhị phân \texttt{is\_promo\_day}. \\
-$\Delta R$ & Chênh lệch doanh thu & Dùng khi so sánh doanh thu giữa hai mốc thời gian. \\
-$BaseRevenue_{m,d}$ & Doanh thu nền theo tháng--ngày & Trung vị doanh thu lịch sử của các ngày có cùng tháng $m$ và ngày $d$. \\
-$ResidualRevenue_t$ & Phần chênh lệch so với mô hình nền & $ResidualRevenue_t = R_t - BaseRevenue_t$. \\
-$Q_{0.997}^{Revenue}$ & Phân vị 99,7\% của doanh thu & Dùng để giới hạn các dự báo doanh thu quá cực đoan. \\
-$Q_{0.998}^{COGS}$ & Phân vị 99,8\% của giá vốn & Dùng để giới hạn các dự báo giá vốn quá cực đoan. \\
-MAE & Sai số tuyệt đối trung bình & Đo mức sai lệch trung bình giữa dự báo và thực tế. \\
-RMSE & Căn bậc hai của sai số bình phương trung bình & Nhạy hơn với các dự báo sai lệch lớn. \\
-$R^2$ & Hệ số xác định & Đánh giá mức độ mô hình giải thích được biến động của dữ liệu. \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\noindent\textit{Quy ước trình bày số.} Trong toàn văn, dấu phẩy được dùng làm dấu thập phân theo cách viết tiếng Việt. Ví dụ, $15{,}689$ tỷ VND được hiểu là mười lăm phẩy sáu tám chín tỷ VND.
-\newpage
 
 % =========================================================
 
@@ -199,19 +151,24 @@ $19{,}9\%$ và không ghi nhận ngày khuyến mại. Tháng 8 là điểm yế
 xuống $-8{,}3\%$ và lợi nhuận gộp/ngày âm nhẹ. Tháng 12 có tỷ lệ chuyển đổi cao, $0{,}92\%$, nhưng
 giá trị trung bình mỗi đơn chỉ 18.261 VND và biên lợi nhuận gộp chỉ $0{,}7\%$.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.95\linewidth]{img/fig03.png}
-\caption{Mùa vụ theo doanh thu/ngày, biên lợi nhuận gộp và tỷ lệ ngày khuyến mại.}
-\label{fig:seasonality}
-\end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\linewidth]{img/fig04.png}
-\caption{Doanh thu theo ngày trong tháng, chuẩn hoá theo trung bình tháng.}
-\label{fig:dom-heatmap}
+\begin{minipage}{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{img/fig03.png}
+        \caption{}
+    \label{fig:yearly-index}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{img/fig04.png}
+    \caption{}
+    \label{fig:waterfall}
+\end{minipage}
 \end{figure}
+
 
 Một mùa bán hàng tốt cần tạo ra cả doanh thu, lợi nhuận gộp và biên lợi nhuận đủ ổn. Điều này phù
 hợp với các nghiên cứu về khuyến mại: khuyến mại có thể giúp tăng lượng bán, nhưng không tự động đảm
@@ -356,10 +313,8 @@ Nhìn chung, mô hình được thiết kế để vừa bám quy luật lịch 
 hạn trong bài toán doanh thu theo ngày.
 
 % =========================================================
-\newpage
 \phantomsection
 \addcontentsline{toc}{section}{Tài liệu tham khảo}
-\setcounter{page}{0}
 \renewcommand{\refname}{Tài liệu tham khảo}
 \begin{thebibliography}{99}
 \bibitem{davenport2013analytics}
@@ -416,5 +371,49 @@ Melvin Stephens Jr.
 \newblock \emph{The Economic Journal}, 116(513):680--701, 2006.
 \newblock DOI: \url{https://doi.org/10.1111/j.1468-0297.2006.01106.x}
 \end{thebibliography}
+
+\appendix
+\section*{Danh mục ký hiệu}
+\setcounter{page}{0}
+\thispagestyle{empty}
+\addcontentsline{toc}{section}{Danh mục ký hiệu}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Ký hiệu và thước đo sử dụng trong báo cáo}
+\label{tab:notations}
+\begin{tabularx}{\textwidth}{
+>{\raggedright\arraybackslash}p{0.18\textwidth}
+>{\raggedright\arraybackslash}p{0.30\textwidth}
+X}
+\toprule
+\textbf{Ký hiệu} & \textbf{Ý nghĩa} & \textbf{Cách tính / diễn giải} \\
+\midrule
+$S_t$ & Số phiên truy cập trong ngày $t$ & Tương ứng với biến \texttt{sessions}. \\
+$O_t$ & Số đơn hàng trong ngày $t$ & Tương ứng với biến \texttt{order\_count}. \\
+$R_t$ & Doanh thu trong ngày $t$ & Tương ứng với biến \texttt{Revenue}. \\
+$COGS_t$ & Giá vốn trong ngày $t$ & Tương ứng với biến \texttt{COGS}. \\
+$GP_t$ & Lợi nhuận gộp trong ngày $t$ & $GP_t = R_t - COGS_t$. \\
+$GM_t$ & Biên lợi nhuận gộp trong ngày $t$ & $GM_t = \dfrac{GP_t}{R_t}$. \\
+$CVR_t$ & Tỷ lệ chuyển đổi trong ngày $t$ & $CVR_t = \dfrac{O_t}{S_t}$. \\
+$AOV_t$ & Giá trị trung bình mỗi đơn hàng & $AOV_t = \dfrac{R_t}{O_t}$. \\
+$RPS_t$ & Doanh thu trên mỗi phiên truy cập & $RPS_t = \dfrac{R_t}{S_t}$. \\
+\texttt{promo\_share} & Tỷ lệ ngày có khuyến mại & Trung bình của biến nhị phân \texttt{is\_promo\_day}. \\
+$\Delta R$ & Chênh lệch doanh thu & Dùng khi so sánh doanh thu giữa hai mốc thời gian. \\
+$BaseRevenue_{m,d}$ & Doanh thu nền theo tháng--ngày & Trung vị doanh thu lịch sử của các ngày có cùng tháng $m$ và ngày $d$. \\
+$ResidualRevenue_t$ & Phần chênh lệch so với mô hình nền & $ResidualRevenue_t = R_t - BaseRevenue_t$. \\
+$Q_{0.997}^{Revenue}$ & Phân vị 99,7\% của doanh thu & Dùng để giới hạn các dự báo doanh thu quá cực đoan. \\
+$Q_{0.998}^{COGS}$ & Phân vị 99,8\% của giá vốn & Dùng để giới hạn các dự báo giá vốn quá cực đoan. \\
+MAE & Sai số tuyệt đối trung bình & Đo mức sai lệch trung bình giữa dự báo và thực tế. \\
+RMSE & Căn bậc hai của sai số bình phương trung bình & Nhạy hơn với các dự báo sai lệch lớn. \\
+$R^2$ & Hệ số xác định & Đánh giá mức độ mô hình giải thích được biến động của dữ liệu. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\noindent\textit{Quy ước trình bày số.} Trong toàn văn, dấu phẩy được dùng làm dấu thập phân theo cách viết tiếng Việt. Ví dụ, $15{,}689$ tỷ VND được hiểu là mười lăm phẩy sáu tám chín tỷ VND.
+\newpage
+
 
 \end{document}
