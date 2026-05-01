@@ -50,8 +50,7 @@
 \title{DATATHON 2026 -- Breaking Business Boundaries\\
 \large}
 
-\author{Anonymous Authors \\
-Affiliation withheld for double-blind review}
+\author{Team: Nguyễn Ngọc Hiếu \\ Nguyễn Ngọc Yến, Nguyễn Ngọc Hiếu, Huỳnh Kim Gia Bảo, Phạm Minh Trí \\ VinUniversity, Đại học Khoa học và Công nghệ Hà Nội}
 \date{Tháng 4, 2026}
 \begin{document}
 
@@ -113,21 +112,7 @@ $R^2$ & Hệ số xác định & Đánh giá mức độ mô hình giải thích
 \newpage
 
 % =========================================================
-\section{Giới thiệu}
-\setcounter{page}{0}
-\thispagestyle{empty}
 
-
-Trong dữ liệu vận hành của một doanh nghiệp thương mại điện tử, doanh thu là chỉ số dễ nhìn thấy nhất, nhưng chưa đủ để giải thích toàn bộ hiệu quả kinh doanh. Cùng một mức doanh thu có thể đến từ nhiều tình huống khác nhau: có nhiều lượt truy cập nhưng ít người mua, có ít lượt truy cập hơn nhưng khách hàng sẵn sàng mua hơn, hoặc doanh thu vẫn giữ được nhưng biên lợi nhuận bị thu hẹp do khuyến mại quá mạnh. Vì vậy, nếu chỉ nhìn doanh thu tăng hay giảm, người phân tích rất dễ bỏ qua điểm nghẽn thực sự của hệ thống.
-
-Báo cáo này đặt câu hỏi trung tâm: \textit{doanh nghiệp đang thiếu nhu cầu, thiếu khả năng chuyển đổi, hay đang bán hàng theo cách làm suy yếu hiệu quả kinh tế?} Cách tiếp cận này phù hợp với tinh thần của phân tích dữ liệu trong quản trị hiện đại, khi dữ liệu không chỉ dùng để mô tả quá khứ mà còn hỗ trợ quyết định kinh doanh \cite{davenport2013analytics}. Với thương mại điện tử, dữ liệu vận hành nên được xem là bằng chứng chẩn đoán ban đầu; các thay đổi lớn về giao diện, sản phẩm hoặc khuyến mại vẫn cần được kiểm chứng bằng thí nghiệm có kiểm soát như A/B testing \cite{kohavi2007controlled,kohavi2020trustworthy}.
-
-Hai nhóm nghiên cứu có liên quan trực tiếp đến bài toán này. Nhóm thứ nhất là các nghiên cứu về khuyến mại, cho thấy ưu đãi có thể làm tăng số đơn trong ngắn hạn nhưng cũng có thể làm giảm giá trị giỏ hàng và biên lợi nhuận \cite{blattberg1990sales}. Nhóm thứ hai là các nghiên cứu về tối ưu tỷ lệ chuyển đổi và trải nghiệm thanh toán, trong đó những ma sát nhỏ ở trang sản phẩm, giỏ hàng hoặc bước thanh toán có thể gây mất mát lớn khi xét trên toàn hệ thống \cite{zimmermann2023cro,baymard2025checkout,baymard2025abandonment}.
-
-Từ đó, báo cáo có ba mục tiêu chính. Thứ nhất, tổ chức lại phân tích dữ liệu thành một câu chuyện kinh doanh mạch lạc, thay vì chỉ trình bày các biểu đồ rời rạc. Thứ hai, xác định điểm nghẽn tăng trưởng trong giai đoạn 2013--2022. Thứ ba, chuyển các phát hiện định lượng thành khuyến nghị có thể hành động. Theo yêu cầu của đề bài, phần phân tích được triển khai theo bốn lớp: mô tả, chẩn đoán, dự báo và đề xuất hành động.
-
-Một giới hạn cần nói rõ từ đầu là dữ liệu được tổng hợp theo ngày. Mức dữ liệu này phù hợp để đọc xu hướng, mùa vụ và chu kỳ hành vi, nhưng chưa đủ để kết luận chính xác kênh truy cập nào suy yếu, nhóm sản phẩm nào làm co biên lợi nhuận, hay bước nào trong thanh toán khiến khách hàng rời bỏ. Vì vậy, các kết luận trong báo cáo được xem là bằng chứng chẩn đoán, không phải bằng chứng nhân quả tuyệt đối.
-\newpage
 % =========================================================
 % =========================================================
 \section{Trực quan hoá và phân tích dữ liệu}
