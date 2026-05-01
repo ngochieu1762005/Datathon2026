@@ -179,6 +179,7 @@ File này cũng được lưu trong:
 outputs/sub_final.csv
 ```
 
+**Lưu ý:** Trước khi chạy các notebook, cần đảm bảo toàn bộ file dữ liệu đầu vào đã được đặt đầy đủ trong thư mục `raw_data/`. Sau khi chạy notebook đầu tiên và tạo ra file `daily_table.csv`, các notebook tiếp theo cần sử dụng thêm file này để tiếp tục quá trình phân tích và xây dựng mô hình.
 
 ## 7. File dự báo cuối cùng
 
